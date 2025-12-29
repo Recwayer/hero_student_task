@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group = 'programs'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(files("libs/heroes_task_lib-1.0-SNAPSHOT.jar"))
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
